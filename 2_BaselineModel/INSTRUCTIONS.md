@@ -8,41 +8,43 @@ The purpose of this stage is to establish a baseline model for the bakery sales 
 
 The following features were selected based on their potential influence on sales patterns:
 
-- Warengruppe (product group)  
-- KielerWoche (binary indicator for event days)  
-- DayOfWeek, Weekend, Month (temporal features)  
-- TemperatureCategory, CloudCategory, WindCategory (categorized weather features)
+- **Warengruppe** (product group)  
+- **KielerWoche** (binary indicator for event days)  
+- **DayOfWeek**, **Weekend**, **Month** (temporal features)  
+- **TemperatureCategory**, **CloudCategory**, **WindCategory** (categorized weather features)  
+- **IsHoliday_lib**, **Season** (categorical and binary features reflecting holidays and seasons)
 
 These features capture seasonality, weather conditions, and special events that may impact sales.
 
 ## Implementation
 
-We implemented a Linear Regression model as the baseline. The pipeline included:
+Two baseline models were implemented:
 
-- One-hot encoding for categorical features  
-- Numerical features passed directly  
-- Train/test split with 80% for training and 20% for testing
+1. **Linear Regression** with direct numerical features:  
+   - `Temperatur`, `Bewoelkung`, `Windgeschwindigkeit`, `Weekend`, `KielerWoche`
 
-For comparison, we also implemented a Random Forest Regressor using the same preprocessing steps.
+2. **Random Forest Regressor** using a preprocessing pipeline:  
+   - One-hot encoding for categorical features  
+   - Numerical features passed directly  
+   - Train/test split with 80% training and 20% testing
 
 ## Evaluation
 
 ### Linear Regression
 
-- **Mean Squared Error**: 17,965.13  
+- **Mean Squared Error**: 17,950.51  
 - **R² Score**: 0.064  
 
 The linear regression model performed poorly, indicating that the relationship between features and sales is likely non-linear.
 
 ### Random Forest Regressor
 
-- **Mean Squared Error**: 5,736.76  
-- **R² Score**: 0.729  
+- **MAPE**: 0.2030  
+- **Mean Squared Error**: 5,579.66  
+- **R² Score**: 0.737  
 
-The random forest model significantly outperformed the baseline, capturing more complex interactions between the features.
-
-This comparison confirms that a non-linear model like Random Forest is more appropriate for this forecasting task.
+The random forest model significantly outperformed linear regression, capturing more complex interactions between the features. This suggests that non-linear models are more appropriate for this forecasting task.
 
 ## Task
 
-Create a Jupyter Notebook to conduct your implmentation of the baseline model.
+Create a Jupyter Notebook to conduct your implementation of the baseline model.
