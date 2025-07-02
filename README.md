@@ -14,24 +14,26 @@ Regression
 
 ### Results Summary
 
--   **Best Model:** [Name of the best-performing model]
+-   **Best Model:** lightGBM 5
 -   **Evaluation Metric:** MAPE
--   **Result by Category** (Identifier):
-    -   **Bread** (1): [XX]%
-    -   **Rolls** (2): [XX]%
-    -   **Croissant** (3): [XX]%
-    -   **Confectionery** (4): [XX]%
-    -   **Cake** (5): [XX]%
-    -   **Seasonal Bread** (6): [XX]%
+-   **Overall MAPE:** 18.39%
+-   **Result by Category** (Warengruppe):
+    -   **Bread** (1): 0.2108%
+    -   **Rolls** (2): 0.1324%
+    -   **Croissant** (3): 0.1869%
+    -   **Confectionery** (4): 0.2190%
+    -   **Cake** (5): 0.1457%
+    -   **Seasonal Bread** (6): 0.3206%
 
 ## Documentation
 
-1.  [**Data Import and Preparation**](0_DataPreparation/)
-3.  [**Dataset Characteristics (Barcharts)**](1_DatasetCharacteristics/)
-4.  [**Baseline Model**](2_BaselineModel/)
-5.  [**Model Definition and Evaluation**](3_Model/)
+1.  [**Data Import and Preparation**](0_DataPreparation/01_merge_data.ipynb)
+3.  [**Dataset Characteristics (Barcharts)**](1_DatasetCharacteristics/Bakery_Sales_Dataset_Characteristics.ipynb)
+4.  [**Baseline Model - linear regression**](2_BaselineModel/baseline_model_linear_regression.ipynb)
+5.  [**Baseline Model - random forest**](2_BaselineModel/baseline_model_random_forest.ipynb)
+6.  [**Model Definition and Evaluation**](3_Model/final_model_lightbm_v5.ipynb)
 6.  [**Presentation**](4_Presentation/README.md)
 
 ## Cover Image
 
-![](CoverImage/cover_image.png)
+![](CoverImage/slides_cover_image.png)

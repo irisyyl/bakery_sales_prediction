@@ -44,7 +44,3 @@ The linear regression model performed poorly, indicating that the relationship b
 - **R² Score**: 0.737  
 
 The random forest model significantly outperformed linear regression, capturing more complex interactions between the features. This suggests that non-linear models are more appropriate for this forecasting task.
-
-## Task
-
-Create a Jupyter Notebook to conduct your implementation of the baseline model.
